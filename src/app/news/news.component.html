@@ -1,0 +1,11 @@
+<div class="page">
+    <div class="container">
+       <app-news-item
+       *ngFor="let newsEl of newsList; let i = index"
+        [news]="newsEl"
+        [index]="i"
+       >
+        </app-news-item>
+    </div>
+
+</div>

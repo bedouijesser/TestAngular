@@ -1,0 +1,68 @@
+  <!-- Navbar -->
+<nav>
+	<div class="nav-wrapper">
+		<a class="brand-logo center">Schedual</a>
+		<a class="sidenav-trigger waves-effect" data-target="mobile-demo">
+		<i class="material-icons">menu</i>
+    </a>
+    <!-- Dropdown Trigger -->
+    <ul class="right">
+      <li>
+        <a class='dropdown-trigger darken-2' href='#' data-target='dropdown1'>
+          <span class="material-icons" style="font-size: 32px;padding-top: 10px;">more_horiz
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- SideNav -->
+<ul class="sidenav sidenav-fixed" id="mobile-demo">
+	<li class="active"><a class="waves-effect home-btn" routerLink="/console"><i class="material-icons">home</i>Home</a></li>
+	<li class="center no-padding">
+    <div class="indigo darken-2 white-text" style="height: 180px;cursor: pointer;">
+      <div class="row" routerLink="/profile" s>
+        <img 
+          style="margin-top: 6%;" 
+          width="100" 
+          height="100" 
+          [src]="userImagePath" 
+          class="circle responsive-img" 
+        />
+        <p style="margin-top: -5%;">
+           {{  username  }}
+        </p>
+      </div>
+    </div>
+  </li>
+	<li>
+    <a class="waves-effect" routerLink="/schedual">
+      <i class="material-icons">schedule</i>Schedual
+    </a>
+  </li>
+	<li>
+    <a class="waves-effect" routerLink="/news">
+      <i class="material-icons">description</i>News
+    </a>
+  </li>
+	<li>
+    <a class="waves-effect" routerLink="/chatroom">
+      <i class="material-icons">chat</i>Chatroom
+    </a>
+  </li>
+	<li>
+    <a class="waves-effect" routerLink="/contact">
+      <i class="material-icons">contacts</i>Contact
+    </a>
+  </li>
+</ul>
+
+  <!-- RightDropdown -->
+
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a class="waves-effect" routerLink="/console">Settings</a></li>
+  <li><a class="waves-effect" routerLink="/console">Help</a></li>
+  <li class="divider"></li>
+  <li><a class="waves-effect" routerLink="/auth">Logout</a></li>
+</ul>

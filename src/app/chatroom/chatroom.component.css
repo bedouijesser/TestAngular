@@ -1,0 +1,23 @@
+h1
+{   
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.chat-window
+{   
+    height: 22em;
+    flex: 1;
+    background: #F2F5F8;
+    margin: 0 auto;
+   padding: 30px 30px 20px;
+    border-bottom: 2px solid white;
+    overflow-y: scroll;
+    border-radius: 5px;
+    
+}
+ .chat-room {
+    margin: .5rem;
+}
+

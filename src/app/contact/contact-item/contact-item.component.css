@@ -1,0 +1,27 @@
+/* Profile Card */
+
+
+#profile-card .card-image {
+    height: 150px;
+  }
+#profile-card .card-content {
+    padding-top: 34px;
+  }
+  #profile-card .card-content p {
+   
+    font-size: 1.2rem;
+    margin: 10px 0 12px 0;
+  }
+  #profile-card .card-profile-image {
+    width: 70px;
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  #profile-card .btn-move-up {
+    position: relative;
+    top: -40px;
+    right: -18px;
+    margin-right: 10px !important;
+  }

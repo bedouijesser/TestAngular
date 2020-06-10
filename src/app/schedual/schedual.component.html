@@ -1,0 +1,23 @@
+<div class="page">
+    <!-- Tabs -->
+    <div class="row">
+        <ul class="tabs" (click)="onTabClick($event)">
+            <li class="tab col s2 l2"><a class="active">Mon</a></li>
+            <li class="tab col s2 l2"><a>Tue</a></li>
+            <li class="tab col s2 l2"><a>Wed</a></li>
+            <li class="tab col s2 l2"><a>Thu</a></li>
+            <li class="tab col s2 l2"><a>Fri</a></li>
+            <li class="tab col s2 l2"><a>Sat</a></li>
+        </ul>
+    </div>
+
+    <!-- Schedual Content -->
+    <div class="container">
+        <app-course-item
+        *ngFor="let courseEl of courses; let i = index"
+        [course]="courseEl"
+        [index]="i"
+        >
+        </app-course-item>
+    </div>
+</div>

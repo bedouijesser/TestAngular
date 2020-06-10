@@ -1,0 +1,53 @@
+  .nav-wrapper {
+    background-color: indigo;
+  }
+  li > a[routerLink="/console"] {
+    padding-top: 10px;
+  }
+  
+  .dropdown-content li>a {
+    color: rgba(0,0,0,0.87);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+}
+  .dropdown-trigger { 
+    height: 64px;
+  }
+  
+  .home-btn {
+    height: 64px;
+  }
+  
+  
+  @media only screen and (min-width: 992px) {
+    nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+      height: 64px;
+      line-height: 59px;
+    }
+
+  }
+
+  nav {
+    padding-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    nav {
+      padding-left: 0;
+    }
+    .home-btn {
+      height: 56px;
+    }
+  
+  }
+  @media only screen and (max-width : 600px) {
+    
+    .dropdown-trigger {
+      height: 56px;
+    }  
+  }
+ 

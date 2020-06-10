@@ -1,0 +1,29 @@
+  * {
+    margin-top: 5px;
+  }
+  
+  .row {
+    margin-bottom: 0;
+  }
+  
+  /* card */
+  .card {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .tab {
+    background-color: #efefef;
+  }
+
+  
+  .page, .main {
+    margin-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    .page, .main {
+      margin-left: 0;
+    }
+  }
+  

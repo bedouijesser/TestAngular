@@ -1,0 +1,25 @@
+  .page {
+    padding-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    .page {
+      padding-left: 0;
+    }
+  }
+  ul.tabs > li {
+    cursor: pointer;
+    user-select: none;
+  }
+  /* card */
+ .card-content  { 
+  user-select: none;
+  }
+
+.tab {
+  background-color: #dddddd;
+}
+
+.seance {
+  margin: .8em .75rem;
+}

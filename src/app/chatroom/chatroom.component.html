@@ -1,0 +1,65 @@
+<div class="page">
+  
+    <!-- container and title -->
+
+    <div class="container">
+      <h1 class="center-align">Chatroom</h1>
+
+      <!-- buttons for chatrooms -->
+      <div class="chat-rooms mb-3 center-align" (click)="onRoomClick($event)">
+        <div class="row">choose a topic</div>
+        <button class="btn light-green darken-3 chat-room" id="lobby">#lobby</button>
+        <button class="btn light-blue darken-4 chat-room" id="music">#music</button>
+        <button class="btn grey darken-2 chat-room" id="mimies">#mimies</button>
+        <button class="btn purple lighten-3 chat-room" id="hidoras">#hidoras</button>
+        <button class="btn green darken-2 chat-room" id="spandex">#spandex</button>
+
+      </div>
+      <!-- chat window /list -->
+      <div class="chat-window">
+        <ul 
+          class="chat-list list-group collection"
+          >
+          <app-chatroom-msg
+          *ngFor="let msgEl of chats; let i = index"
+          [msg]="msgEl"
+          [index]="i"
+          >
+
+          </app-chatroom-msg>
+        </ul>
+      </div>
+
+      <!-- message field and send button -->
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s10">
+                <input 
+                    id="user_msg" 
+                    type="text" 
+                    class="form-control validate"
+                    autocomplete="off"
+                    formControlName="user_msg">
+                <label for="user_msg">Your Message</label>
+              </div>
+              <div class="input-field col s2">
+                <button 
+                  class="btn waves-effect waves-light green darken-2" 
+                  type="submit"
+                  (click)="onAddMsg()"
+                  [disabled]="!messageForm.valid">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+
+    </div>
+</div>
