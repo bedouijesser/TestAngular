@@ -25,8 +25,8 @@ export class SchedualComponent implements OnInit {
 
 
   onTabClick(event: MouseEvent ){
-    // console.log((<HTMLElement>event.srcElement).textContent)
-    switch ((<HTMLElement>event.srcElement).textContent) {
+    console.log((<HTMLElement>event.target).textContent)
+    switch ((<HTMLElement>event.target).textContent) {
       
       case 'Mon':
 
