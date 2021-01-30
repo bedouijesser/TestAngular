@@ -4,10 +4,10 @@ const app = express();
 // const util = require('util');
 // const { APP_ID } = require('@angular/core');
 
-app.use(express.static("./dist/test-app/"));
+app.use(express.static("./dist/docs/"));
 
 app.get("/*", function (req, res) {
-  res.sendFile("test-app/index.html", {
+  res.sendFile("docs/index.html", {
     root: "dist/"
   });
 });
