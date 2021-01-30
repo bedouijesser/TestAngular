@@ -4,12 +4,14 @@ const app = express();
 // const util = require('util');
 // const { APP_ID } = require('@angular/core');
 
-app.use(express.static("./dist/"));
+app.use(express.static("./dist/test-app/"));
+
 app.get("/*", function (req, res) {
-  res.sendFile("index.html", {
+  res.sendFile("test-app/index.html", {
     root: "dist/"
   });
 });
+
 var listener = app.listen(process.env.PORT || 3000, function(){
   console.log('Listening on port ' + listener.address().port); //Listening on port 3000
   // console.log(app);
