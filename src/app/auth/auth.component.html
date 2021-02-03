@@ -1,34 +1,42 @@
-<div class="container">
-<div class="row page">
-	
-	<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-		<div class="form-group input-field">
-			<label for="email">E-Mail</label>
-			<input 
-			  type="email" 
-			  id="email" 
-			  class="form-control" 
-			  ngModel 
-			  name="email" 
-			  required 
-			  email />
-		</div>
-		<div class="form-group input-field">
-			<label for="password">Password</label>
-			<input 
-			  type="password"
-			  id="password"
-			  class="form-control"
-			  ngModel 
-			  name="password" 
-			  required 
-			  minlength="6" />
-		</div>
-		<div>
-			<button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
-				Login
-			</button>
-		</div>
-	</form>
-</div>
+<div class='auth-page ' >
+    <div class=" row justify-content-center right-side">
+
+        <div class=" col-lg-4 col-md-5 col-sm-6 col-xs-10" >
+
+          <mat-card >
+            <div class="text-center">
+              <div class="col align-self-center" >           
+                <img src="assets/images/avatar.png" id="avatar" class="img-fluid  ">
+                <br>
+                <img id ="logo" src="assets/images/planProLogo.png" class="img-fluid">  
+                <div >
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Adresse e-mail</mat-label>
+                    <input matInput [formControl]="username" placeholder="Username">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                  </mat-form-field>
+                </div>
+                <div >
+                  <mat-form-field >
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput [formControl]='password' [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+
+                <button mat-raised-button  color="primary" (click)='connect()'>Connexion</button>
+                <br>
+                <a mat-stroked-button target="_blank">Mot de passe oublié ?</a>
+                
+              </div>
+            </div>
+            
+          </mat-card> 
+        </div>
+
+    </div>
+ 
+
 </div>
