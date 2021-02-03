@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     { path :'contact', component: ContactComponent }
 ]
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
+    imports: [RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' })],
     exports: [RouterModule]
   })
   

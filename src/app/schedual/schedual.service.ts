@@ -1,4 +1,6 @@
 import { Course } from "./course.model";
+import { Injectable } from "@angular/core";
+@Injectable()
 export class SchedualService {
 
      // Creating a new Seance instance 
